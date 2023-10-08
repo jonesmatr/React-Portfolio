@@ -90,7 +90,8 @@ main {
 .bio {
   display: block;
   clear: both;
-  max-width: 800px; /* Added to control the width of the bio text */
+  max-width: none;
+  width: 95%; /* Added to control the width of the bio text */
   margin: 0; /* Adjust the margins as needed */
   padding: 10px; /* Added padding for better spacing */
 }
