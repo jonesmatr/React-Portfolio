@@ -2,12 +2,15 @@ import React from 'react';
 import Navigation from './Navigation';
 
 const Header = () => {
-  return (
-    <header>
-      <h1>Matthew R. Jones</h1>
-      <Navigation />
-    </header>
-  );
+    return (
+        <header className="header">
+            <div className="developer-name">
+                Matthew R. Jones
+            </div>
+            <Navigation />
+        </header>
+    );
 };
 
 export default Header;
+
