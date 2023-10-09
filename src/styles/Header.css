@@ -1,0 +1,19 @@
+/* Style for the Header/Navigation */
+header {
+    background-color: #333;
+    color: white;
+    padding: 15px 30px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Style for the Header */
+header.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 15px 30px;
+    width: 100%;
+  }
