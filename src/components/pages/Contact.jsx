@@ -65,20 +65,38 @@ const Contact = () => {
 
   return (
     <section id="contact">
+      <h2>Contact Me</h2>
       <form onSubmit={handleSubmit}>
         <label>
-          Name:
-          <input type="text" name="name" value={formData.name} onChange={handleChange} />
+          Name
+          <input 
+            type="text" 
+            name="name" 
+            value={formData.name} 
+            onChange={handleChange} 
+            placeholder="Enter your name" 
+          />
           {errors.name && <span className="error">{errors.name}</span>}
         </label>
         <label>
-          Email:
-          <input type="email" name="email" value={formData.email} onChange={handleChange} />
+          Email
+          <input 
+            type="email" 
+            name="email" 
+            value={formData.email} 
+            onChange={handleChange} 
+            placeholder="Enter your email" 
+          />
           {errors.email && <span className="error">{errors.email}</span>}
         </label>
         <label>
-          Message:
-          <textarea name="message" value={formData.message} onChange={handleChange}></textarea>
+          Message
+          <textarea 
+            name="message" 
+            value={formData.message} 
+            onChange={handleChange} 
+            placeholder="Enter your message" 
+          />
           {errors.message && <span className="error">{errors.message}</span>}
         </label>
         <button type="submit">Submit</button>
