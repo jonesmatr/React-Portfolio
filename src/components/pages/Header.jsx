@@ -1,5 +1,5 @@
 import React from 'react';
-import NavTabs from '../NavTabs';
+import NavTabs from '../NavTabs';  // Corrected the import path here
 import '../../styles/Header.css'; 
 
 const Header = ({ currentPage, handlePageChange }) => {
@@ -17,5 +17,4 @@ const Header = ({ currentPage, handlePageChange }) => {
 };
 
 export default Header;
-
 

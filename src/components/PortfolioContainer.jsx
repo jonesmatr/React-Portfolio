@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Header from './pages/Header';  // Import Header
+import Header from './pages/Header';
 import AboutMe from './pages/AboutMe';
 import Portfolio from './pages/Portfolio';
 import Resume from './pages/Resume';
@@ -11,16 +11,11 @@ export default function PortfolioContainer() {
 
   const renderPage = () => {
     switch (currentPage) {
-      case 'About Me':
-        return <AboutMe />;
-      case 'Portfolio':
-        return <Portfolio />;
-      case 'Resume':
-        return <Resume />;
-      case 'Contact':
-        return <Contact />;
-      default:
-        return <AboutMe />;
+      case 'About Me': return <AboutMe />;
+      case 'Portfolio': return <Portfolio />;
+      case 'Resume': return <Resume />;
+      case 'Contact': return <Contact />;
+      default: return <AboutMe />;
     }
   };
 
@@ -29,8 +24,9 @@ export default function PortfolioContainer() {
   return (
     <div>
       <Header 
-      currentPage={currentPage} 
-      handlePageChange={handlePageChange}/> 
+        currentPage={currentPage} 
+        handlePageChange={handlePageChange} 
+      />
       <main className="mx-3">{renderPage()}</main>
       <Footer />
     </div>
