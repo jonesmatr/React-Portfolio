@@ -1,14 +1,83 @@
 import React from 'react';
-import Project from './Project';
-import '../../styles/Portfolio.css';
+import '../../styles/Portfolio.css'; 
+import githubLogo from '../../assets/github-logo.png';
+import mealPlanner from '../../assets/Meal-Planner.jpg';
+import textEditor from '../../assets/Text-Editor.png';
+import techBlog from '../../assets/tech-blog.jpg';
+import noteTaker from '../../assets/note-taker.jpg';
+import weatherDashboard from '../../assets/weather-dashboard.jpg';
+import workDayScheduler from '../../assets/work-day-scheduler.jpg';   
+
+const projects = [
+  {
+    title: 'Meal Planner',
+    image: mealPlanner,
+    deployed: 'https://meal-planner-08232023-07a30f8d4150.herokuapp.com/',
+    github: 'https://github.com/jonesmatr/Meal-Planner.git',
+    description: 'MVC App'
+  },
+  {
+    title: 'Text Editor',
+    image: textEditor,
+    deployed: 'https://text-editor-100123-7b133408c5cd.herokuapp.com/',
+    github: 'https://github.com/jonesmatr/Text-Editor.git',
+    description: 'PWA App'
+  },
+  {
+    title: 'Tech Blog',
+    image: techBlog,
+    deployed: 'https://tech-blog-08282023-b51a638c8d74.herokuapp.com/',
+    github: 'https://github.com/jonesmatr/Tech-Blog.git',
+    description: 'MVC App'
+    
+  },
+  {
+    title: 'Note Taker',
+    image: noteTaker,
+    deployed: 'https://secret-mesa-81373-68f8998a8913.herokuapp.com/',
+    github: 'https://github.com/jonesmatr/Note-Taker.git',
+    description: 'Express.js'
+  },
+  {
+    title: 'Weather Dashboard',
+    image: weatherDashboard,
+    deployed: 'https://jonesmatr.github.io/Weather-Dashboard/',
+    github: 'https://github.com/jonesmatr/Weather-Dashboard.git',
+    description: 'Server-Side API'
+  },
+  {
+    title: 'Work Day Scheduler',
+    image: workDayScheduler,
+    deployed: 'https://jonesmatr.github.io/Work-Day-Scheduler/',
+    github: 'https://github.com/jonesmatr/Work-Day-Scheduler.git',
+    description: 'JavaScript/JQuery'
+  }
+];
+
 
 const Portfolio = () => {
   return (
     <section id="portfolio">
-      <Project title="Project 1" image="project1.png" deployedLink="#" repoLink="#" />
-      {/* Add more Project components here */}
+      <h2>Portfolio</h2>
+      <div className="projects">
+      {projects.map((project, index) => (
+    <div className="project-card" key={index}>
+        <img src={project.image} alt={project.title} className="project-image" />
+        <div className="hover-effect">
+            <a href={project.deployed} target="_blank" rel="noopener noreferrer">
+                <h3>{project.title}</h3>
+            </a>
+            <a href={project.github} target="_blank" rel="noopener noreferrer">
+                <img src={githubLogo} alt="GitHub" className="github-logo" />
+            </a>
+            <p>{project.description}</p>
+        </div>
+    </div>
+))}
+      </div>
     </section>
   );
 };
 
 export default Portfolio;
+
