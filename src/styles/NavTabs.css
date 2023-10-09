@@ -1,0 +1,21 @@
+/* Style for the navigation */
+nav.navigation ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  nav.navigation ul li {
+    display: inline;
+    margin: 0 15px; /* Adjust the spacing between items as needed */
+  }
+  
+  nav.navigation ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  /* Changing color on hover */
+  nav.navigation ul li a:hover {
+    color: #ccc; /* Adjust as needed */
+  }
+  

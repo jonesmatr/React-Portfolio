@@ -1,6 +1,6 @@
 import React from 'react';
-import Navigation from './Navigation';
-import '../styles/Header.css'; // Importing Header.css
+import NavTabs from '../NavTabs';
+import '../../styles/Header.css';
 
 const Header = () => {
     return (
@@ -8,7 +8,7 @@ const Header = () => {
             <div className="developer-name">
                 Matthew R. Jones
             </div>
-            <Navigation />
+            <NavTabs />
         </header>
     );
 };

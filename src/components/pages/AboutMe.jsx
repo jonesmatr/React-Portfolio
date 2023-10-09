@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/AboutMe.css';
+import '../../styles/AboutMe.css';
 
 const AboutMe = () => {
   return (
@@ -25,3 +25,5 @@ Matthew is always open to exploring new opportunities and collaborations that ch
 
 
 export default AboutMe;
+
+
