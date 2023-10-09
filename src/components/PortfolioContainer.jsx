@@ -28,7 +28,9 @@ export default function PortfolioContainer() {
 
   return (
     <div>
-      <Header />  {/* Included Header component here */}
+      <Header 
+      currentPage={currentPage} 
+      handlePageChange={handlePageChange}/> 
       <main className="mx-3">{renderPage()}</main>
       <Footer />
     </div>
