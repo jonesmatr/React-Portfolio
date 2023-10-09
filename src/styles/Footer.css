@@ -7,3 +7,15 @@ footer {
     box-sizing: border-box;
     text-align: center;
   }
+
+  footer a {
+    color: white;  /* Icon color */
+    margin: 0 10px;  /* Space between icons */
+    font-size: 24px;  /* Icon size */
+    transition: color 0.3s;  /* Color transition effect */
+  }
+  
+  footer a:hover {
+    color: #007bff;  /* Icon color on hover */
+  }
+  
