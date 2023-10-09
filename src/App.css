@@ -1,8 +1,19 @@
+/* Add this to your CSS file */
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
 #root {
-  max-width: none; /* Changed from 1280px to none */
-  width: 85%; /* Or even 100%, depending on your design */
-  margin: 0 auto;
-  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.container {
+  /* Your styling for the container, for example, a max-width to avoid overly wide content */
+  max-width: 1200px;
 }
 
 .logo {

@@ -67,3 +67,8 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+#root {
+  max-width: 1200px; /* or whatever maximum width you prefer */
+  margin: 0 auto;
+}

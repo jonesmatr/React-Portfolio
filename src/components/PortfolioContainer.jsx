@@ -22,13 +22,13 @@ export default function PortfolioContainer() {
   const handlePageChange = (page) => setCurrentPage(page);
 
   return (
-    <div>
+    <div className="container"> {/* Added container class here */}
       <Header 
-        currentPage={currentPage} 
-        handlePageChange={handlePageChange} 
-      />
+      currentPage={currentPage} 
+      handlePageChange={handlePageChange}/> 
       <main className="mx-3">{renderPage()}</main>
       <Footer />
     </div>
   );
+
 }
