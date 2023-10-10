@@ -4,16 +4,21 @@ body, html {
   margin: 0;
 }
 
-#root {
-  display: flex;
-  justify-content: center;
+/* #root {
   align-items: center;
   height: 100%;
-}
+} */
 
 .container {
-  /* Your styling for the container, for example, a max-width to avoid overly wide content */
-  max-width: 1200px;
+  width: 100%; /* or set a specific max-width */
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 90%;
+  }
 }
 
 .logo {

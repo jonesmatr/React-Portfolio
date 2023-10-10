@@ -13,8 +13,8 @@ export default function PortfolioContainer() {
     switch (currentPage) {
       case 'About Me': return <AboutMe />;
       case 'Portfolio': return <Portfolio />;
-      case 'Resume': return <Resume />;
       case 'Contact': return <Contact />;
+      case 'Resume': return <Resume />;      
       default: return <AboutMe />;
     }
   };

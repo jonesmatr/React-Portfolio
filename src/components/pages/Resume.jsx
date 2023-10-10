@@ -24,16 +24,19 @@ const Resume = () => {
 
   return (
     <section id="resume">
-      <a href="resume.pdf" download>Download Resume</a>
+      <h2 className="resume-header">Resume</h2>
+      <a href="resume.pdf" download className="download-link">
+        Download Resume <i className="fas fa-download"></i>
+      </a>
       
-      <h2>Front-end Proficiencies</h2>
+      <h4 className="proficiency-header">Front-end Proficiencies</h4>
       <ul>
         {frontEndProficiencies.map((skill, index) => (
           <li key={index}>{skill}</li>
         ))}
       </ul>
 
-      <h2>Back-end Proficiencies</h2>
+      <h4>Back-end Proficiencies</h4>
       <ul>
         {backEndProficiencies.map((skill, index) => (
           <li key={index}>{skill}</li>

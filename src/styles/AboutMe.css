@@ -21,7 +21,7 @@
   /* Style for the about-me container */
   .about-me-container {
     text-align: left;
-    max-width: 1000px; /* Adjusted the maximum width */
+    max-width: 1200px; /* Adjusted the maximum width */
     width: 100%; /* Ensures it takes the full available width */
     padding: 20px; /* Added padding for better spacing */
     box-sizing: border-box; /* Ensures padding is included in the width */
@@ -32,7 +32,7 @@
     display: block;
     clear: both;
     max-width: none;
-    width: 95%; /* Added to control the width of the bio text */
+    width: 100%; /* Added to control the width of the bio text */
     margin: 0; /* Adjust the margins as needed */
     padding: 10px; /* Added padding for better spacing */
   }

@@ -4,7 +4,7 @@ import '../../styles/AboutMe.css';
 const AboutMe = () => {
   return (
     <section id="about-me" className="about-me-container">
-      <h1>About Me</h1>
+      <h2>About Me</h2>
       <img src="profile-pic.jpg" alt="Developer" className="profile-image" />
       <p className="bio">Matthew is a multifaceted and dedicated developer with a decade of on-and-off experience in building intuitive and innovative websites. With a skill set deeply rooted in React, JavaScript, Express.js, and MongoDB, Matthew has a proven track record of transforming complex challenges into seamless web solutions.
 

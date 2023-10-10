@@ -11,3 +11,16 @@
 #resume {
     background-color: #ddd;
   }
+
+  .resume-header {
+    margin-bottom: 20px; /* Adjust as needed */
+}
+
+.download-link {
+    display: block;
+    margin-bottom: 10px; /* Adjust as needed */
+}
+
+.proficiency-header {
+    margin-top: 5px; /* Adjust as needed */
+}
