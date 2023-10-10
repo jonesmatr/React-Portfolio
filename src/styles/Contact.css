@@ -1,7 +1,7 @@
 /* Contact.css */
 
 :root {
-  --primary-color: #E63946;
+  --primary-color: #e63947c6;
   --secondary-color: #F1FAEE;
   --tertiary-color: #A8DADC;
   --quaternary-color: #457B9D;
@@ -43,7 +43,7 @@ textarea {
   height: 150px;
 }
 
-button {
+#contact button {
   padding: 10px 20px;
   background-color: var(--primary-color); /* Updated */
   color: var(--secondary-color); /* Updated */
@@ -55,9 +55,10 @@ button {
   transition: background-color 0.3s ease-in-out;
 }
 
-button:hover {
+#contact button:hover {
   background-color: var(--quinary-color); /* Updated */
 }
+
 
 .error {
   color: red; /* You may want to change this to one of your theme colors */
