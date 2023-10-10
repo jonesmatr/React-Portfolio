@@ -1,21 +1,24 @@
-/* Specific styles for each section */
+/* Updated CSS */
 #about {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 80%;
-    margin: auto;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  margin: auto;
+  background-color: var(--background-color); /* Updated */
+  color: var(--text-color); /* Updated */
+}
 
 #about{
     background-color: #f0f0f0;
   }
   
   .about-me-container h1 {
-    color: #333; /* Change the color as per your design */
-    margin-bottom: 20px; /* Add space between the title and the image */
+    color: var(--header-footer-color); /* Updated */
+    margin-bottom: 20px;
   }
+  
   
   
   /* Style for the about-me container */

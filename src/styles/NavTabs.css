@@ -1,20 +1,80 @@
-/* Style for the navigation */
+/* NavTabs.css */
+:root {
+  --primary-color: #E63946;
+  --secondary-color: #F1FAEE;
+  --tertiary-color: #A8DADC;
+  --quaternary-color: #457B9D;
+  --quinary-color: #1D3557;
+}
+
+.nav-container {
+  position: relative;
+}
+
+.hamburger {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--secondary-color); /* Updated */
+}
+
 .nav-tabs {
-  list-style-type: none;
-  padding: 0;
+  display: flex;  /* make it horizontal */
+  background-color: var(--quinary-color); /* Updated */
+  color: var(--secondary-color); /* Updated */
+}
+
+.nav-tabs.open {
+  display: block;  /* make it vertical when open */
+  background-color: var(--quinary-color); /* Updated */
 }
 
 .nav-item {
-  display: inline;
-  margin: 0 15px; /* Adjust the spacing between items as needed */
+  border-bottom: 2px solid var(--quinary-color); /* Updated */
+}
+
+.nav-item:hover {
+  border-bottom: 2px solid var(--primary-color); /* Updated */
 }
 
 .nav-link {
-  color: white;
-  text-decoration: none;
+  color: var(--secondary-color); /* Updated */
 }
 
-/* Changing color on hover */
 .nav-link:hover {
-  color: #ccc; /* Adjust as needed */
+  color: var(--primary-color); /* Updated */
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-tabs {
+    display: none;
+    position: absolute;
+    background-color: var(--quinary-color); /* Updated */
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  .nav-tabs.open {
+    display: block;
+  }
+
+  .nav-item {
+    width: 100%;
+  }
+
+  .nav-link {
+    display: block;
+    width: 100%;
+    text-align: left;
+    color: var(--secondary-color); /* Updated */
+  }
+
+  .nav-link:hover {
+    color: var(--primary-color); /* Updated */
+  }
 }

@@ -1,62 +1,72 @@
+:root {
+  --primary-color: #E63946;
+  --secondary-color: #F1FAEE;
+  --tertiary-color: #A8DADC;
+  --quaternary-color: #457B9D;
+  --quinary-color: #1D3557;
+}
+
 .projects {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
     justify-content: center;
     padding: 20px 0;
-  }
-  
-  .project-card {
-    border: 1px solid #ccc;
-    /* padding: 10px; */
+    background-color: var(--secondary-color); /* Updated */
+}
+
+.project-card {
+    border: 1px solid var(--quinary-color); /* Updated */
     border-radius: 5px;
     width: 500px;
     text-align: center;
-  }
-  
-  .project-card img {
+    background-color: var(--secondary-color); /* Updated */
+}
+
+.project-card img {
     max-width: 100%;
     height: auto;
     border-radius: 5px;
-  }
+}
 
-  .project-card {
+.project-card {
     position: relative;
     overflow: hidden;
-  }
-  
-  .project-image {
+}
+
+.project-image {
     z-index: 1;
     width: 100%;
     transition: transform 0.3s ease-in-out;
-  }
-  
-  .hover-effect {
+}
+
+.hover-effect {
     z-index: 2;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.7);
-    color: white;
+    background: rgba(var(--quinary-color), 0.7); /* Updated */
+    color: var(--secondary-color); /* Updated */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
-  }
-  
-  .project-card:hover .hover-effect {
+}
+
+.project-card:hover .hover-effect {
     opacity: 1;
-  }
-  
-  .project-card:hover .project-image {
+}
+
+.project-card:hover .project-image {
     transform: scale(1.1);
-  }
-  
-  .github-logo {
-    width: 50px; /* Adjust as needed */
-    margin: 10px; /* Adjust as needed */
-  }
+}
+
+.github-logo {
+    width: 50px;
+    margin: 10px;
+    filter: invert(1); /* Updated to make the logo visible on dark background */
+}

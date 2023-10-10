@@ -1,8 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/NavTabs.css";
 
 function NavTabs({ currentPage, handlePageChange }) {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+  
   return (
+    <div className="nav-container">
+      <button className="hamburger" onClick={toggleMenu}>
+        ☰
+      </button>
+      <ul className={`nav nav-tabs ${isMenuOpen ? 'open' : ''}`}>
     <ul className="nav nav-tabs">
       <li className="nav-item">
         <a
@@ -45,6 +54,8 @@ function NavTabs({ currentPage, handlePageChange }) {
         </a>
       </li>
     </ul>
+    </ul>
+    </div>
   );
 }
 

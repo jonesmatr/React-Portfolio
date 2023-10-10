@@ -1,7 +1,18 @@
-/* Add this to your CSS file */
+/* New color variables */
+:root {
+  --accent-color: #E63946;
+  --background-color: #F1FAEE;
+  --secondary-color: #A8DADC;
+  --text-color: #457B9D;
+  --header-footer-color: #1D3557;
+}
+
+/* Existing CSS */
 body, html {
   height: 100%;
   margin: 0;
+  color: var(--text-color); /* Added */
+  background-color: var(--background-color); /* Added */
 }
 
 /* #root {
@@ -75,13 +86,14 @@ nav.navigation ul li {
   margin: 0 15px; /* Adjust the spacing between items as needed */
 }
 
+/* Updated color for navigation links */
 nav.navigation ul li a {
-  color: white;
+  color: var(--accent-color); /* Updated */
   text-decoration: none;
 }
 
-/* Changing color on hover */
+/* Updated hover color for navigation links */
 nav.navigation ul li a:hover {
-  color: #ccc; /* Adjust as needed */
+  color: var(--secondary-color); /* Updated */
 }
 
