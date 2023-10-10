@@ -76,13 +76,17 @@
 
   .nav-item {
     width: 100%;
+    margin: 0;  /* Reset margin */
+    padding: 0; /* Reset padding */
   }
 
   .nav-link {
     display: block;
     width: 100%;
-    text-align: center;
-    color: var(--secondary-color);    
+    text-align: center !important; /* Updated with !important */
+    color: var(--secondary-color);
+    margin: 0;  /* Reset margin */
+    padding: 0; /* Reset padding */
   }
 
   .nav-link:hover {
