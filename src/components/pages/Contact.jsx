@@ -8,10 +8,10 @@ const Contact = () => {
     message: '',
   });
 
-  const [errors, setErrors] = useState({
-    name: '',
-    email: '',
-    message: '',
+  const [touched, setTouched] = useState({
+    name: false,
+    email: false,
+    message: false,
   });
 
   const handleChange = (e) => {
@@ -22,83 +22,69 @@ const Contact = () => {
     });
   };
 
-  const validateEmail = (email) => {
-    const re = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-    return re.test(String(email).toLowerCase());
+  const handleBlur = (e) => {
+    const { name } = e.target;
+    setTouched({
+      ...touched,
+      [name]: true,
+    });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    let valid = true;
-    let newErrors = {
-      name: '',
-      email: '',
-      message: '',
-    };
-
-    if (!formData.name.trim()) {
-      newErrors.name = 'Name is required';
-      valid = false;
-    }
-
-    if (!formData.email.trim()) {
-      newErrors.email = 'Email is required';
-      valid = false;
-    } else if (!validateEmail(formData.email)) {
-      newErrors.email = 'Invalid email address';
-      valid = false;
-    }
-
-    if (!formData.message.trim()) {
-      newErrors.message = 'Message is required';
-      valid = false;
-    }
-
-    setErrors(newErrors);
-
-    if (valid) {
-      console.log('Form data submitted:', formData);
-      // Here you can handle the form submission, like sending the data to an API or a server
-    }
+    console.log('Form data submitted:', formData);
+    // Handle form submission, like sending data to an API or a server
   };
 
   return (
     <section id="contact">
-      <h2>Contact Me</h2>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} noValidate>
         <label>
-          Name
-          <input 
-            type="text" 
-            name="name" 
-            value={formData.name} 
-            onChange={handleChange} 
-            placeholder="Enter your name" 
+          Name:
+          <input
+            type="text"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            onBlur={handleBlur}
+            required
           />
-          {errors.name && <span className="error">{errors.name}</span>}
+          {touched.name && formData.name === '' && (
+            <span className="error">Name is required</span>
+          )}
         </label>
+
         <label>
-          Email
-          <input 
-            type="email" 
-            name="email" 
-            value={formData.email} 
-            onChange={handleChange} 
-            placeholder="Enter your email" 
+          Email:
+          <input
+            type="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            onBlur={handleBlur}
+            required
           />
-          {errors.email && <span className="error">{errors.email}</span>}
+          {touched.email && formData.email === '' ? (
+            <span className="error">Email is required</span>
+          ) : touched.email && !formData.email.includes('@') ? (
+            <span className="error">Invalid email address</span>
+          ) : null}
         </label>
+
         <label>
-          Message
-          <textarea 
-            name="message" 
-            value={formData.message} 
-            onChange={handleChange} 
-            placeholder="Enter your message" 
-          />
-          {errors.message && <span className="error">{errors.message}</span>}
+          Message:
+          <textarea
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
+            onBlur={handleBlur}
+            required
+          ></textarea>
+          {touched.message && formData.message === '' && (
+            <span className="error">Message is required</span>
+          )}
         </label>
+
         <button type="submit">Submit</button>
       </form>
     </section>

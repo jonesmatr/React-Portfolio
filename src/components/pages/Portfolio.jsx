@@ -1,6 +1,6 @@
 import React from 'react';
-import '../../styles/Portfolio.css'; 
-import githubLogo from '../../assets/github-logo.png';
+import Project from './Project';
+import '../../styles/Portfolio.css';
 import mealPlanner from '../../assets/Meal-Planner.jpg';
 import textEditor from '../../assets/Text-Editor.png';
 import techBlog from '../../assets/tech-blog.jpg';
@@ -60,20 +60,16 @@ const Portfolio = () => {
     <section id="portfolio">
       <h2>Portfolio</h2>
       <div className="projects">
-      {projects.map((project, index) => (
-    <div className="project-card" key={index}>
-        <img src={project.image} alt={project.title} className="project-image" />
-        <div className="hover-effect">
-            <a href={project.deployed} target="_blank" rel="noopener noreferrer">
-                <h3>{project.title}</h3>
-            </a>
-            <a href={project.github} target="_blank" rel="noopener noreferrer">
-                <img src={githubLogo} alt="GitHub" className="github-logo" />
-            </a>
-            <p>{project.description}</p>
-        </div>
-    </div>
-))}
+        {projects.map((project, index) => (
+          <Project 
+            key={index}
+            title={project.title}
+            image={project.image}
+            deployed={project.deployed}
+            github={project.github}
+            description={project.description}
+          />
+        ))}
       </div>
     </section>
   );
