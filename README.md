@@ -7,7 +7,7 @@ This portfolio is a showcase of my projects and skills as a web developer, creat
 
 You can view the deployed app online at [GitHub Pages](https://jonesmatr.github.io/React-Portfolio/).
 
-![React Portfolio ](.src/assets/react-app-screenshot.png) 
+![React Portfolio ](./src/assets/react-app-screenshot.png) 
 
 ## Running Locally
 
