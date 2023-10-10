@@ -61,6 +61,7 @@
 
   .nav-tabs.open {
     display: block;
+    z-index: 1000;
   }
 
   .nav-item {

@@ -4,8 +4,10 @@ import react from '@vitejs/plugin-react'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
+  base: '/React-Portfolio/',  // Add this line to set the base URL
   server: {
     port: 3000,
     open: true
   }
 })
+
