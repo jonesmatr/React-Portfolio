@@ -6,7 +6,8 @@ import textEditor from '../../assets/Text-Editor.png';
 import techBlog from '../../assets/tech-blog.jpg';
 import noteTaker from '../../assets/note-taker.jpg';
 import weatherDashboard from '../../assets/weather-dashboard.jpg';
-import workDayScheduler from '../../assets/work-day-scheduler.jpg';   
+import workDayScheduler from '../../assets/work-day-scheduler.jpg';
+import vaa from '../../assets/vaa.png';   
 
 const projects = [
   {
@@ -48,6 +49,13 @@ const projects = [
   {
     title: 'Work Day Scheduler',
     image: workDayScheduler,
+    deployed: 'https://jonesmatr.github.io/Work-Day-Scheduler/',
+    github: 'https://github.com/jonesmatr/Work-Day-Scheduler.git',
+    description: 'JavaScript/JQuery'
+  },
+  {
+    title: 'Visual Architecture Assistant', 
+    image: vaa,
     deployed: 'https://jonesmatr.github.io/Work-Day-Scheduler/',
     github: 'https://github.com/jonesmatr/Work-Day-Scheduler.git',
     description: 'JavaScript/JQuery'
