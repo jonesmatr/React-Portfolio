@@ -56,9 +56,9 @@ const projects = [
   {
     title: 'Visual Architecture Assistant', 
     image: vaa,
-    deployed: 'https://jonesmatr.github.io/Work-Day-Scheduler/',
-    github: 'https://github.com/jonesmatr/Work-Day-Scheduler.git',
-    description: 'JavaScript/JQuery'
+    deployed: 'https://vaa102423v2-99a6aa2a15e0.herokuapp.com/',
+    github: 'https://github.com/jonesmatr/Visual-Architecture-Assistant.git',
+    description: 'MERN Stack'
   }
 ];
 
